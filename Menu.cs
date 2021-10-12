@@ -59,11 +59,11 @@ namespace SpeedReader
 
         private void CorrectButtonSpacing()
         {
-            Control[] buttons = new Control[] { ReadTextButton, SaveTextButton, OptionsPanel, StartViewing};
-            int individualHeight = RightPanel.Panel1.Height / buttons.Length;
-            foreach(Control button in buttons)
+            Control[] controls = new Control[] { ReadTextButton, SaveTextButton, OptionsPanel, StartViewing};
+            int individualHeight = RightPanel.Panel1.Height / controls.Length;
+            foreach(Control control in controls)
             {
-                button.Height = individualHeight;
+                control.Height = individualHeight;
             }
         }
 
@@ -135,7 +135,6 @@ namespace SpeedReader
             foreach (string word in list)
             {
                 WordLabel.Text = word;
-                Console.WriteLine(word);
                 await Task.Delay(waitTime);
             }
 
